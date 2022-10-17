@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: grey;
+    padding: 20px;
+}
+.login{
+    width: 20%;
+    background-color: rgb(200, 200, 200);
+    margin-bottom: 20px;
+    padding: 5px;
+    display: flex;
+}
+.login button{
+    margin-left: 10px;
+}
+
+.pavadinimas h2{
+    margin-left: 300px;
+}
+.top{
+    display: flex;
+}
+.navbar{
+    display: flex;
+    background-color: rgb(200, 200, 200);
+    height: 100px;
+}
+nav{
+   margin: 0 auto;
+   display: flex;
+}
+
+.logo img{
+width: 80px;
+margin-top: 10px;
+margin-left: 10px;
+
+}
+nav a{
+margin: 45px 30px;
+text-decoration: none;
+color: black;
+}
+.main{
+    display: flex;
+    height: 500px;
+    margin-top:20px; 
+}
+.sidebar{
+height: 200px;
+width: 120px;
+margin-right: 20px;
+background-color: rgb(200, 200, 200);
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+
+}
+
+.sidebar a{
+text-decoration: none;
+color: black;
+margin-bottom: 20px;
+}
+
+.form{
+    background-color: rgb(200, 200, 200);
+    padding: 10px;
+    width: 100%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    font-size: 15px;
+    padding: 2px;
+}
+td img{
+width: 40px;
+}
+td{
+    text-align: center;
+}
+footer{
+    text-align: center;
+    margin-top: 20px ;
+}
+a:hover{
+    color: gray;
+}
