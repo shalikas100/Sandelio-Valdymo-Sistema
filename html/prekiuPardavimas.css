@@ -38,6 +38,9 @@ label{
 input{
     width: 200px;
 }
+.button{
+padding-left: 165px;
+}
 
 .kliento_uzsakymas{
     width: 60%;

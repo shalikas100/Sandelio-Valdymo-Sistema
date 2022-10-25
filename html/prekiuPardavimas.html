@@ -25,8 +25,12 @@
                         <label for="klientas">KLIENTAS</label>
                         <input type="text" name="klientas">
                     </div>
+                    <div class="imones_kodas">
+                        <label for="klientas">ĮM. K.</label>
+                        <input type="text" name="imones_kodas">
+                    </div>
                     <div class="gatve">
-                        <label for="gatve">GATVES ADRESAS</label>
+                        <label for="gatve">GATVĖS ADRESAS</label>
                         <input type="text" name="gatve">
                     </div>
                     <div class="miestas">
@@ -34,12 +38,16 @@
                         <input type="text" name="miestas">
                     </div>
                     <div class="pasto_k">
-                        <label for="pasto_k">PASTO KODAS</label>
+                        <label for="pasto_k">PAŠTO KODAS</label>
                         <input type="text" name="pasto_k">
                     </div>
                     <div class="telefonas">
                         <label for="telefonas">TELEFONO NUMERIS</label>
                         <input type="text" name="telefonas">
+                    </div>
+                    <div class="button">
+                        <button type="submit" name="tvirtinti_klienta">PATVIRTINTI</button>
+                        <button type="submit" name="redaguoti_klienta">REDAGUOTI</button>
                     </div>
                 </form>
             </div>
@@ -53,6 +61,19 @@
                         <th>Barkodas</th>
                         <th>Kiekis</th>
                         <th>Svoris (kg)</th>
+                        <!-- Jei reikes koreguoti, paspaudus "Redaguoti pardavima", atsiras mygtukas
+                         "Istrinti", arba bus galima pakeisti "Kiekis". Kaip patvirtinti 
+                         pakeitimus, dar besugalvojau -->
+                        <th>Redagavimas</th>
+                    </tr>
+                    <td>1</td>
+                    <td>1010</td>
+                    <td>Kazkokios prekes pavadinimas</td>
+                    <td>726736480010102</td>
+                    <td>4</td>
+                    <td>0,4</td>
+                    <td><button>Ištrinti</button></td>
+                    </tr>
                     </tr>
                     <td>1</td>
                     <td>1010</td>
@@ -93,15 +114,6 @@
                     <td>4</td>
                     <td>0,4</td>
                     </tr>
-                    </tr>
-                    <td>1</td>
-                    <td>1010</td>
-                    <td>Kazkokios prekes pavadinimas</td>
-                    <td>726736480010102</td>
-                    <td>4</td>
-                    <td>0,4</td>
-                    </tr>
-
                 </table>
             </div>
 
@@ -113,7 +125,14 @@
             <form method="get" action="index.html">
                 <label for="prekes">PREKĖS PAIEŠKA</label>
                 <input type="prekes" name="prekes">
-                <button type="submit" name="ieskoti">IVESTI</button>
+                <button type="submit" name="ieskoti">IEŠKOTI</button>
+            </form>
+            <form action="get" action="index.html">
+                <label for="kiekis">ĮVESKITE KIEKĮ</label>
+                <input type="number" name="kiekis">
+                <button type="submit" name="itraukti_preke">ĮTRAUKTI</button>
+                <button type="submit" name="tvirtinti_pardavima">TVIRTINTI</button>
+                <button type="submit" name="redaguoti_pardavima">REDAGUOTI PARDAVIMĄ</button>
             </form>
         </div>
 
