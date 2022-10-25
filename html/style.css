@@ -19,6 +19,7 @@ body{
     background-color: rgb(232, 229, 229);
     width: 35%;
     padding: 10px;
+    border: solid 1px black;
 }
 
 .top{
@@ -34,6 +35,8 @@ body{
     padding: 10px;
     margin: auto;
     background-color: rgb(232, 229, 229);
+    border: solid 1px black;
+
 }
 
 .logo img{
@@ -54,6 +57,8 @@ height: auto;
 .navbar{
     display: flex;
     background-color: rgb(232, 229, 229);
+    border: solid 1px black;
+
 }
 
 nav{
@@ -98,6 +103,8 @@ nav ul li{
     width: 100%;
     background-color: rgb(232, 229, 229);
     text-align: center;
+    border: solid 1px black;
+
 }
 
 .sidebar ul{
@@ -125,6 +132,7 @@ nav ul li{
 .form{
     background-color: rgb(232, 229, 229);
     padding: 10px;
+    border: solid 1px black;
 }
 .filtruoti{
     padding-top: 10px;
@@ -147,6 +155,10 @@ table, th, td{
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+}
+
+table th{
+    background-color: red;
 }
 
 footer{

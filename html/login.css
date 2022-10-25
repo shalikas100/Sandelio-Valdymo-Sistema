@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     background-color: rgb(200, 197, 197);
@@ -32,5 +33,15 @@ body{
 
 .form form label{
 width: 190px;
+}
+.neregistruotas{
+    flex-direction: column;
+}
+.neregistruotas a{
+    text-decoration: none;
+    color: rgb(122, 71, 71);
+}
+.neregistruotas a:hover{
+    background-color: gray;
 }
 
