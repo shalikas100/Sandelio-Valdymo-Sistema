@@ -13,7 +13,7 @@
             <div class="header">
                 <h1>PREKIŲ PAJAMAVIMAS</h1>
                 <div class="grizti">
-                    <form method="GET" action="index.html">
+                    <form method="GET" action="index.php">
                         <button type="submit" name="grizti">GRĮŽTI</button>
                     </form>
                 </div>
@@ -154,12 +154,12 @@
     
                 <!-- sioje formoje turi buti laukelis, kur reikes ivesti kieki, kuri norime parduoti
                 ir paspaudus ivesti automatiskai uzsipildyti klientu uzsakymu lenteleje pirma eilute ir t.t... -->
-                <form method="get" action="prekiuPavamavimas.html">
+                <form method="get" action="prekiuPavamavimas.php">
                     <label for="prekes">PREKĖS PAIEŠKA</label>
                     <input type="text" name="prekes">
                     <button type="submit" name="ieskoti">IEŠKOTI</button>
                 </form>
-                <form action="get" action="prekiuPajamavimas.html">
+                <form action="get" action="prekiuPajamavimas.php">
                     <label for="kiekis">ĮVESKITE KIEKĮ</label>
                     <input type="number" min="0" name="kiekis">
     

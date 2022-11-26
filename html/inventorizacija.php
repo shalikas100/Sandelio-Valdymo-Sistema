@@ -16,14 +16,14 @@
                 <h1>INVENTORIZACIJA</h1>
             </div>
             <div class="button">
-                <form method="get" action="index.html">
+                <form method="get" action="index.php">
                     <button type="submit" name="grizti">GRĮŽTI</button>
                 </form>
             </div>
         </div>
         <div class="main">
             <div class="form">
-                <form method="get" action="inventorizacija.html">
+                <form method="get" action="inventorizacija.php">
                     <div class="data">
                         <label for="data">DATA</label>
                         <input type="date" name="data">
@@ -63,7 +63,7 @@
                         <td>LIQUI MOLY</td>
                         <td>74</td>
                         <td>
-                            <form method="get" action="inventorizacija.html">
+                            <form method="get" action="inventorizacija.php">
                                 <input type="number" name="sandelio_likutis" min="0">
                                 <button type="submit" name="tvirtinti_likuti">Tvirtinti</button>
                                 <button type="submit" name="koreguoti_likuti">Koreguoti</button>

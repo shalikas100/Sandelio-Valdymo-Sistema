@@ -17,7 +17,7 @@
         <div class="top">
             <div class="login">
                 <p>Prisijungęs: Šarūnas Likas</p>
-                <form method="" action="login.html">
+                <form method="" action="login.php">
                     <button type="submit" name="atsijungti">Atsijungti</button>
                 </form>
 
@@ -26,7 +26,7 @@
                 <h2>WAREHOUSE GOODS CHAIN</h2>
             </div>
             <div class="parasykite">
-                <a href="zinutes_langas.html">PARAŠYKITE MUMS</a>
+                <a href="zinutes_langas.php">PARAŠYKITE MUMS</a>
             </div>
 
         </div>
@@ -35,10 +35,10 @@
             <div class="logo"><img src="/Sandelio Valdymo Sistema/html/img/chain.jpg" alt=""></div>
             <nav>
                 <ul>
-                    <li><a href="prekiuPardavimas.html">PREKIŲ PARDAVIMAS</a></li>
-                    <li><a href="prekiuPajamavimas.html">PREKIŲ PAJAMAVIMAS</a></li>
-                    <li><a href="inventorizacija.html">PREKIŲ INVENTORIZAVIMAS</a></li>
-                    <li><a href="archyvas.html">ARCHYVAS</a></li>
+                    <li><a href="prekiuPardavimas.php">PREKIŲ PARDAVIMAS</a></li>
+                    <li><a href="prekiuPajamavimas.php">PREKIŲ PAJAMAVIMAS</a></li>
+                    <li><a href="inventorizacija.php">PREKIŲ INVENTORIZAVIMAS</a></li>
+                    <li><a href="archyvas.php">ARCHYVAS</a></li>
                 </ul>
 
             </nav>
@@ -46,31 +46,31 @@
         <div class="main">
             <div class="sidebar">
                 <ul>
-                    <li><a href="klientai.html">KLIENTAI</a></li>
+                    <li><a href="klientai.php">KLIENTAI</a></li>
                     <li><a href="#">UŽSAKYMAI</a></li>
                     <li><a href="#">SIUNTIMAI</a></li>
-                    <li><a href="siuntu_skaiciuokle.html">SIUNTŲ KAINŲ SKAIČIUOKLĖ</a></li>
+                    <li><a href="siuntu_skaiciuokle.php">SIUNTŲ KAINŲ SKAIČIUOKLĖ</a></li>
                     <li><a href="#">SANDĖLIO PLANAS</a></li>
                 </ul>
             </div>
             <div class="form">
                 <div class="visos_formos">
                 <div class="ieskoti">
-                    <form method="get" action="index.html">
+                    <form method="get" action="index.php">
                         <label for="prekes">PREKĖS PAIEŠKA</label>
                         <input type="prekes" name="prekes">
                         <button type="submit" name="ieskoti">IEŠKOTI</button>
                     </form>
                 </div>
                 <div class="filtruoti">
-                    <form method="get" action="index.html">
+                    <form method="get" action="index.php">
                         <label for="prekes">PREKIŲ FILTRAVIMAS</label>
                         <input type="prekes" name="prekes">
                         <button type="submit" name="filtruoti">FILTRUOTI</button>
                     </form>
                 </div>
                 <div class="rikiuoti">
-                    <form method="get" action="index.html">
+                    <form method="get" action="index.php">
                         <label for="prekes">PREKIŲ RIKIAVIMAS</label>
                         <input type="prekes" name="prekes">
                         <button type="submit" name="rikiuoti">RIKIUOTI</button>

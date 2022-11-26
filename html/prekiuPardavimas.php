@@ -14,7 +14,7 @@
         <div class="header">
             <h1>PREKIŲ PARDAVIMAS</h1>
             <div class="gristi">
-                <form method="GET" action="index.html">
+                <form method="GET" action="index.php">
                     <button type="submit" name="grizti">GRĮŽTI</button>
                 </form>
             </div>
@@ -182,12 +182,12 @@
 
             <!-- sioje formoje turi buti laukelis, kur reikes ivesti kieki, kuri norime parduoti
             ir paspaudus ivesti automatiskai uzsipildyti klientu uzsakymu lenteleje pirma eilute ir t.t... -->
-            <form method="get" action="prekiuPardavimas.html">
+            <form method="get" action="prekiuPardavimas.php">
                 <label for="prekes">PREKĖS PAIEŠKA</label>
                 <input type="text" name="prekes">
                 <button type="submit" name="ieskoti">IEŠKOTI</button>
             </form>
-            <form action="get" action="prekiuPardavimas.html">
+            <form action="get" action="prekiuPardavimas.php">
                 <label for="kiekis">ĮVESKITE KIEKĮ</label>
                 <input type="number" min="0" name="kiekis">
 

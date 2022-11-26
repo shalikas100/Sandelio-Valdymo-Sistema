@@ -14,13 +14,13 @@
         <div class="header">
             <h1>KLIENTAI</h1>
             <div class="grizti">
-                <form method="GET" action="index.html">
+                <form method="GET" action="index.php">
                     <button type="submit" name="grizti">GRĮŽTI</button>
                 </form>
             </div>
         </div>
         <div class="klientu_paieska">
-            <form method="get" action="klientai.html">
+            <form method="get" action="klientai.php">
                 <div class="kodas">
                     <label for="imones_kodas">IEŠKOTI PAGAL ĮM. K.</label>
                     <input type="text" name="imones_kodas">

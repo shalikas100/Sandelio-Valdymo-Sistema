@@ -14,7 +14,7 @@
         <div class="header">
             <h1>SIUNTŲ SKAIČIUOKLĖ</h1>
             <div class="grizti">
-                <form method="GET" action="index.html">
+                <form method="GET" action="index.php">
                     <button type="submit" name="grizti">GRĮŽTI</button>
                 </form>
             </div>
@@ -26,7 +26,7 @@
                         <h3>SKAIČIUOKLĖ</h3>
                     </div>
                     <div class="skaiciuokles_veiksmai">
-                        <form method="get" action="siuntu_skaiciuokle.html">
+                        <form method="get" action="siuntu_skaiciuokle.php">
                             <label for="siuntos_svoris">SIUNTOS SVORIS (KG)</label>
                             <input type="text" name="siuntos_svoris">
                             <!-- siuntos kaina 2 eur + kg x 0,1 eur -->
@@ -44,7 +44,7 @@
                         <h3>PREKIŲ PAIEŠKA</h3>
                     </div>
                     <div class="prekiu_paieska">
-                        <form method="get" action="siuntu_skaiciuokle.html">
+                        <form method="get" action="siuntu_skaiciuokle.php">
                             <label for="prekes_kodas">PREKĖS KODAS</label>
                             <input type="text" name="prekes_kodas">
                             <button type="submit" name="ieskoti_pagal_koda">IEŠKOTI</button>
@@ -72,7 +72,7 @@
                             <td>Kazkokios prekes pavadinimas</td>
                             <td>0,4</td>
                             <td>
-                                <form method="get" action="siuntu_skaiciuokle.html">
+                                <form method="get" action="siuntu_skaiciuokle.php">
                                     <input type="checkbox" name="pasirinkti_preke">
                                 </form>
                             </td>
@@ -82,7 +82,7 @@
                             <td>Kazkokios prekes pavadinimas</td>
                             <td>0,4</td>
                             <td>
-                                <form method="get" action="siuntu_skaiciuokle.html">
+                                <form method="get" action="siuntu_skaiciuokle.php">
                                     <input type="checkbox" name="pasirinkti_preke">
                                 </form>
                             </td>
@@ -92,7 +92,7 @@
                             <td>Kazkokios prekes pavadinimas</td>
                             <td>0,4</td>
                             <td>
-                                <form method="get" action="siuntu_skaiciuokle.html">
+                                <form method="get" action="siuntu_skaiciuokle.php">
                                     <input type="checkbox" name="pasirinkti_preke">
                                 </form>
                             </td>
@@ -102,7 +102,7 @@
                             <td>Kazkokios prekes pavadinimas</td>
                             <td>0,4</td>
                             <td>
-                                <form method="get" action="siuntu_skaiciuokle.html">
+                                <form method="get" action="siuntu_skaiciuokle.php">
                                     <input type="checkbox" name="pasirinkti_preke">
                                 </form>
                             </td>

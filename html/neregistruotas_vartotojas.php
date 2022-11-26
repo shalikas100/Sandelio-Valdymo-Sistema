@@ -23,8 +23,8 @@
         <nav>
             <ul>
                 <li><a href="#">PREKIŲ PAIEŠKA</a></li>
-                <li><a href="siuntu_skaiciuokle.html">SIUNTŲ KAINŲ SKAIČIUOKLĖ</a></li>
-                <li><a href="zinutes_langas.html">PARAŠYKITE MUMS</a></li>
+                <li><a href="siuntu_skaiciuokle.php">SIUNTŲ KAINŲ SKAIČIUOKLĖ</a></li>
+                <li><a href="zinutes_langas.php">PARAŠYKITE MUMS</a></li>
             </ul>
         </nav>
     </div>

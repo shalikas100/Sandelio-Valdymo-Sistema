@@ -14,7 +14,7 @@
         <div class="header">
             <h1>ARCHYVAS</h1>
             <div class="grizti">
-                <form method="GET" action="index.html">
+                <form method="GET" action="index.php">
                     <button type="submit" name="grizti">GRĮŽTI</button>
                 </form>
             </div>
