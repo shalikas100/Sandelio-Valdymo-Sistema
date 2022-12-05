@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prekiu pajamavimas</title>
-    <link rel="stylesheet" href="prekiuPajamavimas.css">
+    <link rel="stylesheet" href="../css/prekiuPajamavimas.css">
 </head>
 <body>
     <body>
@@ -67,10 +67,12 @@
                         <td>1010</td>
                         <td>Kazkokios prekes pavadinimas</td>
                         <td>726736480010102</td>
+                        <!-- jei reikia koreguoti pajamavima, reikia kad paspaudus koreguoti butu galima keisti kieki,
+                        tikriausiai turi buti inputas -->
                         <td>4</td>
                         <td>0,4</td>
                         <td>
-                            <form method="get" action="#">
+                            <form method="get" action="prekiuPajamavimas.php">
                                 <button type="submit" name="istrinti">Ištrinti</button>
                             </form>
                         </td>
@@ -142,7 +144,7 @@
                         </tr>
                     </table>
                     <div class="tvirtinti_pakeitimus">
-                        <form method="get" action="#">
+                        <form method="get" action="prekiuPajamavimas.php">
                             <button type="submit" name="tvirtinti_pakeitinus">Tvirtinti pakeitimus</button>
                         </form>
                     </div>
@@ -175,6 +177,17 @@
                 </form>
             </div>
 
+            <div class="nauja_preke">
+                <h5>Nauja prekė</h5>
+                <form method="get" action="prekiuPajamavimas.php">
+                    <label for="kodas">Kodas</label>
+                    <input type="text" name="kodas_nauja_preke">
+                    <label for="pavadinimas">Pavadinimas</label>
+                    <input type="text" name="pavadinimas_nauja_preke">
+                    <label for="kiekis">Kiekis</label>
+                    <input type="number" name="kiekis_nauja_preke">
+                </form>
+            </div>
 <!-- 
             cia dar reikia naujos formos tuo atveju, jei atvykusi preke dar nebuvo itraukta i prekiu
             duomenu baze. -->
@@ -182,21 +195,21 @@
             <div class="table">
                 <table>
                     <tr>
-                        <th>ĮTRAUKTI</th>
-                        <th>KODAS</th>
-                        <th>BARKODAS</th>
-                        <th>PAVADINIMAS</th>
-                        <th>LIKUTIS</th>
-                        <th>SVORIS</th>
-                        <th>VNT. DĖŽĖJE</th>
-                        <th>GAMINTOJAS</th>
-                        <th>GALIOJIMO LAIKAS</th>
-                        <th>PREKĖS TIPAS</th>
-                        <th>VIETA SANDĖLYJE</th>
+                        <th>Įtraukti</th>
+                        <th>Kodas</th>
+                        <th>Barkodas</th>
+                        <th>Pavadinimas</th>
+                        <th>Likutis</th>
+                        <th>Svoris</th>
+                        <th>Vnt. dėžėje</th>
+                        <th>Tiekėjas</th>
+                        <th>Galiojimo laikas</th>
+                        <th>Prekės tipai</th>
+                        <th>Vieta sandėlyje</th>
                     </tr>
                     <tr>
                         <!-- pardavimuose suvedus koda, paspaudus mygtuka "ieskoti" issifiltruoja reikiama preke, su stulpliu "itraukti",
-    jame pazymejus checkboxa, ivedus kieki ir paspaudus mygtuka itraukti, klientu uzsakymu lenteleje
+    jame pazymejus checkboxa, ivedus kieki ir paspaudus mygtuka itraukti, pajamavimo lenteleje
     atsiras ta preke, ieskotu prekiu sarasas vel uzsipildo.  -->
                         <td>
                             <form method="GET" action="#">

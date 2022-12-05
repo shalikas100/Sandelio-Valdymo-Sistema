@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Žinutės langas</title>
-    <link rel="stylesheet" href="zinutes_langas.css">
+    <link rel="stylesheet" href="../css/zinutes_langas.css">
 </head>
 
 <body>

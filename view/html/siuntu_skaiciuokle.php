@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siuntu skaiciuokle</title>
-    <link rel="stylesheet" href="siuntu_skaiciuokle.css">
+    <link rel="stylesheet" href="../css/siuntu_skaiciuokle.css">
 </head>
 
 <body>

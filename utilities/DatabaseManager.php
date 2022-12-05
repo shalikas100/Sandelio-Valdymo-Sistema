@@ -19,6 +19,7 @@ class DatabaseManager {
                 "mysql:host=$this->host;dbname=$this->database", 
                 $this->user, 
                 $this->password,
+                //prisijungiant, kad neprarasti LT raidziu.
                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
             );
             
@@ -28,40 +29,12 @@ class DatabaseManager {
         }
     }
 
-
-//     SELECT 
-//     kategorijos.pavadinimas,
-//     produktai.id, 
-//     produktai.pavadinimas,
-//     produktai.aprasymas,
-//     produktai.kaina
-   
-// FROM produktai
-// LEFT JOIN kategorijos
-// ON produktai.kategorijos_id = kategorijos.id
-
-//metodas kuris tiesiogiai paleidzia uzklausa
-
-// raw - gryna/sviesia
-//query - uzklausa
     public function rawQuery($sql){
         try {
             $stmt = $this->conn->prepare($sql);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
-            // lentele - kintamojo tipas(blob)
-            //php blob kintamojo neturi
-            // objektus arba masyvus(asociatyvus masyvas)
-            // blob -> masyvas asociatyvus
-            // stulepliu pavadinimai -> asociatyvaus masyvo indeksais
-            // pavadinimas -> pavadinimas
-            // aprasymas -> aprasymas
-            // kaina -> kaina
-            //  pavadinimas -> pavadinimas - prarandam
-
-
-
-
+   
         } catch (PDOException $e) {
             echo "Klaida: " . $e->getMessage();
         } 
@@ -72,17 +45,14 @@ class DatabaseManager {
         try {
 
             
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //kad rodytu klaidas
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
             $stmt = $this->conn->prepare($sql);
-            //vykdyti uzklausa
             $stmt->execute();
 
-            //rezultato pasidejimas
-
-            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); // lenteles pasirnkti duomenys yra paverciami i asociatyvu masyva
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $result = $stmt->fetchAll();
 
-            return $result; //visas kompanijas kaip asociatyvu masyva
+            return $result;
 
         } catch (PDOException $e) {
             echo "Klaida: " . $e->getMessage();
@@ -94,14 +64,13 @@ class DatabaseManager {
         try {
 
             
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //kad rodytu klaidas
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $this->conn->prepare($sql);
-            //vykdyti uzklausa
             $stmt->execute();
 
             //rezultato pasidejimas
 
-            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); // lenteles pasirnkti duomenys yra paverciami i asociatyvu masyva
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $result = $stmt->fetchAll();
 
             return $result[0]['Count']; //visas kompanijas kaip asociatyvu masyva
@@ -118,17 +87,14 @@ class DatabaseManager {
         try {
 
             
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //kad rodytu klaidas
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $this->conn->prepare($sql);
-            //vykdyti uzklausa
             $stmt->execute();
 
-            //rezultato pasidejimas
-
-            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); // lenteles pasirnkti duomenys yra paverciami i asociatyvu masyva
+            $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $result = $stmt->fetchAll();
 
-            return $result; //visas kompanijas kaip asociatyvu masyva
+            return $result;
 
         } catch (PDOException $e) {
             echo "Klaida: " . $e->getMessage();
@@ -138,17 +104,14 @@ class DatabaseManager {
 
     public function insert($table, $cols, $values) {    
 
-        $cols = implode(',', $cols); // pavadinimas,aprasymas
+        $cols = implode(',', $cols);
         
         for ($i=0; $i < count($values); $i++) { 
             $values[$i] = "'".$values[$i]."'";
         }
         
-        $values = implode(',', $values); // pavadinimas',aprasymas'
+        $values = implode(',', $values);
 
-        
-
-        //lentele gali tureti skirtingus stuleplius, skirtingas ivedamas reiksmes
         $sql = "INSERT INTO `$table`($cols) VALUES ($values)";
 
         try {

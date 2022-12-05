@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warehouse Goods Chain</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 
@@ -26,7 +26,7 @@
                 <h2>WAREHOUSE GOODS CHAIN</h2>
             </div>
             <div class="parasykite">
-                <a href="zinutes_langas.php">PARAŠYKITE MUMS</a>
+                <a href="zinutes_langas.php">SKAITYTI ŽINUTES</a>
             </div>
 
         </div>

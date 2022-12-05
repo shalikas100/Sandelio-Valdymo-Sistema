@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prisijungti</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/login.css"
 </head>
 
 <body>
@@ -24,6 +24,9 @@
             </form>
             <div class="neregistruotas">
                 <a href="neregistruotas_vartotojas.php">Neregistruotas vartotojas</a>
+            </div>
+            <div class="registracija">
+                <a href="registracija.php">Registracija</a>
             </div>
         </div>
     </div>
