@@ -1,6 +1,7 @@
 <?php include "/Applications/MAMP/htdocs/Sandelio Valdymo Sistema/classes/Registracija-class.php" ?>
 <?php $registracijaObjektas = new Registracija(); ?>
 <?php $registracijaObjektas->uzregistruoti_klienta(); ?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,24 @@
     <title>Registracija</title>
 </head>
 <body>
+
+    <div class="session">
+
+             <?php if(isset($_SESSION["zinute"])) { ?>
+                  <p><?php echo $_SESSION["zinute"]; ?></p>
+             </div>
+                <?php 
+                           unset($_SESSION["zinute"]); 
+               ?>
+                 <?php } ?>
+
+    </div>
+
 <div class="container">
+
+
+    
+
     <div class="registracija">
         <h1>Registracija</h1>
     </div>

@@ -1,6 +1,7 @@
 <?php 
 include "/Applications/MAMP/htdocs/Sandelio Valdymo Sistema/utilities/DatabaseManager.php";
 
+
 class Registracija {
 
     private  $stulpeliai = array(
@@ -33,9 +34,30 @@ class Registracija {
 
         if(isset($_POST["uzregistruoti_vartotoja"])) {
 
-            // reikia tikrinti ar slaptazodis ir pakartotinas slaptazodis 
-            // sutampa ir ar db neegzistuoja toks vartotojas su tokiu paciu prisijungimo vardu
+            session_start();
 
+            $slaptazodis = $_POST['slaptazodis'];
+            $slaptazodis_pakartoti = $_POST['pakartoti_slaptazodi'];
+            $prisijungimo_vardas = $_POST["prisijungimo_vardas"];
+            $sql = "SELECT COUNT(*) FROM prisijungimai WHERE prisijungimo_vardas = $prisijungimo_vardas";
+
+            $databaseManager = new DatabaseManager();
+            $prisijungimoSql = $databaseManager->rawQuery($sql);
+
+            if($prisijungimoSql == 1){
+
+                $_SESSION["zinute"] = "Vartotojo vardas negalimas...";
+                header("Location: registracija.php");
+                exit();
+            } else {
+
+                if($slaptazodis != $slaptazodis_pakartoti){
+
+                    $_SESSION["zinute"] = "Slaptažodžiai nesutampa...";
+                    header("Location: registracija.php");
+                    exit();
+               }           
+            }
 
             $data = $_POST; 
             unset($data["uzregistruoti_vartotoja"]);
@@ -44,12 +66,13 @@ class Registracija {
             $cols = array_keys($data);
             $values = array_values($data);
         
-
             $databaseManager = new DatabaseManager();
             $databaseManager->insert('prisijungimai', $cols, $values);
-        
-            header("Location: registracija.php");
-            exit();
+
+            $_SESSION["zinute"] = "Užregistruota. Laukite patvirtinimo nurodytu el. paštu.";
+                header("Location: registracija.php");
+                exit();
+          
            }
 
     }
