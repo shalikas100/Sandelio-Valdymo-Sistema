@@ -39,39 +39,50 @@ class Registracija {
             $slaptazodis = $_POST['slaptazodis'];
             $slaptazodis_pakartoti = $_POST['pakartoti_slaptazodi'];
             $prisijungimo_vardas = $_POST["prisijungimo_vardas"];
-            $sql = "SELECT COUNT(*) FROM prisijungimai WHERE prisijungimo_vardas = $prisijungimo_vardas";
+            $sql = "SELECT COUNT(*) FROM prisijungimai WHERE prisijungimo_vardas = '$prisijungimo_vardas'";
 
             $databaseManager = new DatabaseManager();
             $prisijungimoSql = $databaseManager->rawQuery($sql);
 
-            if($prisijungimoSql == 1){
+            var_dump($prisijungimoSql);
+            echo "<br>";
+            echo "<br>";
 
-                $_SESSION["zinute"] = "Vartotojo vardas negalimas...";
-                header("Location: registracija.php");
-                exit();
-            } else {
+            var_dump('1');
+            echo "<br>";
+            echo "<br>";
 
-                if($slaptazodis != $slaptazodis_pakartoti){
 
-                    $_SESSION["zinute"] = "Slaptažodžiai nesutampa...";
-                    header("Location: registracija.php");
-                    exit();
-               }           
-            }
-
-            $data = $_POST; 
-            unset($data["uzregistruoti_vartotoja"]);
-            unset($data["pakartoti_slaptazodi"]);
-           
-            $cols = array_keys($data);
-            $values = array_values($data);
+            var_dump($prisijungimoSql == '1');
+        //     if($prisijungimoSql == '1'){
         
-            $databaseManager = new DatabaseManager();
-            $databaseManager->insert('prisijungimai', $cols, $values);
 
-            $_SESSION["zinute"] = "Užregistruota. Laukite patvirtinimo nurodytu el. paštu.";
-                header("Location: registracija.php");
-                exit();
+        //         $_SESSION["zinute"] = "Vartotojo vardas negalimas...";
+        //         header("Location: registracija.php");
+        //         exit();
+        //     } else {
+
+        //         if($slaptazodis != $slaptazodis_pakartoti){
+
+        //             $_SESSION["zinute"] = "Slaptažodžiai nesutampa...";
+        //             header("Location: registracija.php");
+        //             exit();
+        //        }           
+        //     }
+
+        //     $data = $_POST; 
+        //     unset($data["uzregistruoti_vartotoja"]);
+        //     unset($data["pakartoti_slaptazodi"]);
+           
+        //     $cols = array_keys($data);
+        //     $values = array_values($data);
+        
+        //     $databaseManager = new DatabaseManager();
+        //     $databaseManager->insert('prisijungimai', $cols, $values);
+
+        //     $_SESSION["zinute"] = "Užregistruota. Laukite patvirtinimo nurodytu el. paštu.";
+        //         header("Location: registracija.php");
+        //         exit();
           
            }
 
